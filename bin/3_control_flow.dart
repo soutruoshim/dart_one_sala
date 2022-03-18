@@ -2,60 +2,59 @@ void main(List<String> args) {
      var a = 10;
      var b = 20;
      var c = 30;
-     //==========simple if condition
+     //==========simple if condition===========
      if(a > b){
        print(a);
      }else if(a < b){
        print(b);
      }else if(a > 0 && b >= 0){
        print(b);
-     }else if(a == 0 || c!= 0){
+     }else if(a == 0 && c!=0){
        print(b);
-     }else{
+     }else {
        print("equal");
      }
 
-     //============Ternary Operator
+     //============Ternary Operator==========
      bool bCondtion = (a > 0 ? true: false);
      print(bCondtion);
      String cConditon = (bCondtion? "Hello": "Hi");
+     print(cConditon);
      int d = a > 0 ? 1 : 2;
      print(d);
 
-     //===========for loop
-     String message = "Hello World";
-     for(var i = 0; i < 5; i++){
-       print("$i $message");
-     }
-     print("List object");
-     List numbers = [1,2,3,4];
-     for(var x in numbers){
-       print(x);
-     }
+     //===========for loop===================
+    String message = "Hello Dart";
+    for(var i = 0; i < 5; i++){
+      print("$i $message");
+    } 
+    List numbers = [0,2,4,5];
+    for(var num in numbers){
+        print(num);
+    }
 
-    // while and do while loop
+    //============== while and do while loop==============
     int order = 1;
-    while(order < 10){
-      print(order++);
+    while(order <= 5){
+        print("order ${order++}");
     }
     do{
-      print(order);
+      print("order $order");
       order--;
-    }while(order > 1);
+    }while(order >= 1);
 
     // break and continues
     order = 1;
-    print("break statment");
-    while(order < 10){
-      if(order == 5) break; // stop loop
+    while(order < 5){
+      if(order == 3) break;
       print("${order++}");
     }
-    // print("Continue statment");
-    // order = 1;
-    // while(order < 10 ){
-    //   if(order == 3) continue; // skip the loop print 5
-    //   print("${order++}");
-    // }
+    order = 1;
+    while(order < 5){
+      if(order == 3) continue;
+      print("order continue ${order++}");
+    }
+
 
     // switch case
     order = 1;

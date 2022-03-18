@@ -1,10 +1,12 @@
 void main(List<String> args) {
-     //========= Arithmetic Operator
+     //========= Arithmetic Operator=========
      // + - * / ~/(for result int) % ++ -- 
-     // ++ & -- can't use with variable null
-     //========= Comparation operator
+     // ++ and -- can't use with variable null
+     
+     //========= Comparation operator========
      // > < >= <= == !=
-     //=========Logic operator
+     
+     //=========Logic operator=============
      // && || !
     
 }

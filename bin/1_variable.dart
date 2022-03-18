@@ -1,64 +1,55 @@
 void main(List<String> arguments) {
-   int a = 10;
-   var b = 7.0;
-   double c = 1.5;
-   bool d = false;
-   String title = "Cambodia";
-   String subTitle = 'Kingdom of Wonder';
-   print("$title, $subTitle");
+  // ===============simple declare variable================
+  int a = 10;
+  var b = 20;
+  double c = 1.5;
+  num d = 10;
+  bool e = false;
+  String title = "Cambodia";
+  dynamic subTitle = "Kingdom of Cambodia";
+  print("$title, $subTitle");
 
-   //=============== late keyword 
-   late int total2;
-   int a2 = 10;
-   int b2 = 20;
-   total2 = a2 + b2;
-   print('Total is $total2');
+//================null safety===================
+  int? a2;
+  int? b2;
+  // int total = a2 + b2; Error cus a2 and b2 is null
+  print(a2);
+  a2 ??=10;
+  print(a2); 
+  int c2 = b2??0;
+  print(c2); // c = 0
 
-   late int total3;
-   // print(total3); error cos total not yet have value
+  //===============late keyword=================
+ late int total;
+ // print(total); can't print before assign value
+ int a3 = 10;
+ int b3 = 20;
 
-   //============= Null
-   int? a1; // a can be null;
-   int? b1;
-   // int total = a + b; error cos a1 and b1 null
+ total = a3 + b3;
+ print(total);
 
-   //=========== ??= operator for assign initail to null variable
-   a1 ??= 10;
-   print(a1);
-  //  a1 ??= 5;
-  //  print(a1); still 10
+ //================dynamic and var===============
 
-   //=========== ??
-   int? a4;
-   a4 = 23;
-   int b4 = a4 ?? 0; // if a is null assign 0 to b;
-   print(b4);
+ var a4 = 10;
+ // a4 = 10.5; Error cus a4 initial with int
+ dynamic b4 = 10;
+ b4 = 10.9;   // can change value and data type
+ print(b4);
+ //===============num & boolean==================
+ num age = 28;
+ num pi = 3.14;
+ int year = 2000;
+ double hafl = 0.5;
 
-
-  //===========var and dynamic keyword
-  var a5 = 10;
-  // a5 = 10.5; error cos a5 initialize is int
-  dynamic a6 = 10;
-  a6 = 10.5;
-  print(a6);
-
-
-  // number
-  num age = 23;
-  num pi = 3.14;
-  int year = 2000;
-  double hafl = 0.5;
-
-  // Boolean
-  bool isTrue = true;
-  bool isFalse = false;
-
+ bool isTrue = true;
+ bool isFalse = false;
+ 
   // final & const for static value of variable
   // final can declare in class and top class
   // const can declare on top class only
-   final double pi2 = 3.14;
-   const double PI2 = 3.14;
-   print('$pi2, $PI2');
+  final double pi2 = 3.14;
+  const double PI2 = 3.14;
+  print('$pi2, $PI2');
 
 
 }

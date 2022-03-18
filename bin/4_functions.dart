@@ -1,42 +1,35 @@
-void main(List<String> args) {
-    print(getName());
-    print(getNameArr());
-    print(sum(10, 10));
-    print(sum1(1, 2));
-    sum3(1, 2);
-
-    //=========call optional operator type 1
-    // put paramater match place in function
-    showProfile("Sout Ruoshim");
-    showProfile("Sout Ruoshim", 25);
-    showProfile("Sout Ruoshim", 25, "male");
-
-    //=========call optional operator type 2
-    showProfile2("Sout Ruoshim");
-    showProfile2("Sout Ruoshim", age: 25);
-    showProfile2("Sout Ruoshim", age: 20, gender: "male");
-
-   
-    
-}
-getName(){
-    print("Hi Sout Ruoshim");
+//==== dynamic return type=====
+getName(name){
+  return "Hello $name";
 }
 
-int sum(a, b){
-  return a + b;
-}
-//======== Arrow function
-getNameArr() => "Hi Sout Ruoshim"; 
-int sum1(a, b) => a + b;
-void sum3(a, b) => print(a + b);
+//===== arrow function=======
+bool isPositiveNum(int a) => a >= 0;
+void showSum(int a, int b) => print("a + b = ${a+b}");
 
-// ===========Optional Operator
-// type 1 
+//======positional optional parameter[...]============
 showProfile(String name, [int age = 0, String gender = "male"]){
-   print("$name, $age, $gender");
+   print("Name: $name, Age: $age, Gender: $gender");
 }
-// type 2 namming optional parameter
-showProfile2(String name, {int age = 0, String gender = "female"}){
-   print("$name, $age, $gender");
+
+//======Naming optional parameter{...}=============
+showProfile2(String name, {int age = 0, String gender = "male"}){
+   print("Name: $name, Age: $age, Gender: $gender");
+}
+void main(List<String> args) {
+   print(getName("Sout Ruoshim"));
+   print(isPositiveNum(10));
+   showSum(10, 10);
+
+   //call positional optional parameter
+   showProfile("Sout Ruoshim");
+   showProfile("Sout Ruoshim", 29);
+   showProfile("Sout Ruoshim", 20 , "Male");
+
+   //call naming optional parameter
+   showProfile2("Sout Ruoshim");
+   showProfile2("Sout Ruoshim", age: 29);
+   showProfile2("Sout Ruoshim", gender: "Male", age:  29);
+
+
 }
