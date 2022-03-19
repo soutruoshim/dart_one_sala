@@ -30,6 +30,4 @@ void main(List<String> args) {
    showProfile2("Sout Ruoshim");
    showProfile2("Sout Ruoshim", age: 29);
    showProfile2("Sout Ruoshim", gender: "Male", age:  29);
-
-
 }
